@@ -13,7 +13,7 @@ public class Parser {
      * @return respective Command from the input string
      */
     public static Command parseCommand(String input) {
-
+        assert input != null : "Input string should not be null";
         String[] parts = input.split(" ");
         String command = parts[0];
 

@@ -7,6 +7,7 @@ public class TaskList {
 
     public TaskList() {
         this.tasks = new ArrayList<Task>();
+        assert tasks != null : "Tasks should not be null after assigning it to a new ArrayList";
     }
 
     public String listTasks() {

@@ -4,7 +4,8 @@ package Frenchie;
  * Represents a Task that is stored in the Task list of the Frenchie chatbot.
  * <p>
  * The task class has 2 attributes, isCompleted and taskName.
- * isCompleted is a boolean attribute, returning true if the task has been completed, and false if the task is incomplete.
+ * isCompleted is a boolean attribute, returning true if the task has been completed
+ * and false if the task is incomplete.
  * taskName is a String that stores the name of the task, such as 'Read Book'.
  * <p>
  */
@@ -21,6 +22,7 @@ public class Task {
      *  Takes in a String which is the name of the task.
      */
     public Task(String name) {
+        assert name != null : "taskName should not be null";
         this.taskName = name;
         isCompleted = false;
     }
@@ -29,6 +31,7 @@ public class Task {
      *  Marks Task as complete by setting the isCompleted attribute to true.
      */
     public void setIsCompleted() {
+        assert !isCompleted : "Task should be incomplete before this method call";
         isCompleted = true;
     }
 
@@ -36,6 +39,7 @@ public class Task {
      *  Marks Task as incomplete by setting the isCompleted attribute to false.
      */
     public void setIsIncomplete() {
+        assert isCompleted : "Task should be complete before this method call";
         isCompleted = false;
     }
 
